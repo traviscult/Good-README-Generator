@@ -2,24 +2,31 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-Description
+## Description
 
-Table of contents UL LI
-
-Installation
-
-Usage 
-
-Credits
-
-License 
-
-Badge 
-
-Contributing
+## Table of contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Contributing](#contributing)
+* [test](#test)
 
 
-Test
+## Installation
+
+## Usage 
+
+## Credits
+
+## License 
+
+## Badge 
+
+## Contributing
+
+
+## Test
 
 
 `;

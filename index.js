@@ -16,26 +16,41 @@ const questions = () => {
             message: "What is the title of your project?",
         },
         {
+            type: "input",
+            name: "description",
+            message: "Please give a description of your project?",
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "What are the steps required to install your project?",
+        },
+        {
+            type: "input",
+            name: "usage",
+            message: "Provide instructions and examples for use. ",
+        },
+        {
+            type: "input",
+            name: "credits",
+            message: "List your collaborators, if any, with links to their GitHub profiles.",
+        },
+        {
             type: "list",
             name: "license",
             message: "What kind of licnese would you like to have?",
-            choices: ['MIT', 'Microsoft Public License', "Mozilla Public License 2.0"]
+            choices: ['MIT', 'GNU GPLv3', 'No License']
         },
         {
             type: "input",
-            name: "description",
-            message: "Explain what your app/project does?",
+            name: "contrubuting",
+            message: "What are your guidelines for contribiting to this project?",
         },
-        {
-            type: "input",
-            name: "",
-            message: "Explain what your app/project does?",
-        },
-        {
-            type: "input",
-            name: "",
-            message: "Explain what your app/project does?",
-        },
+        // {
+        //     type: "input",
+        //     name: "tests",
+        //     message: "",
+        // },
     ]);
 };
 
