@@ -1,15 +1,8 @@
 function generateMarkdown(data) {
-  console.log(data.gitHub)
-  const projectURL = (gitHub, title) => {
-    const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
-    return ` https://github.com/${data.gitHub}/${kebabCaseTitle}`
-    
-  };
-  
   const profilePicture = `https://github.com/${data.gitHub}.png?size=300`
-  
-console.log(projectURL)
-console.log(profilePicture)
+  const kebabCaseTitle = data.title.toLowerCase().split(" ").join("-");
+  const projectURL = ` https://github.com/${data.gitHub}/${kebabCaseTitle}`
+
   return `
 # ${data.title}
 
@@ -46,16 +39,11 @@ ${data.contrubuting}
 ${data.tests}
 
 ## Questions
-  * User GitHub profile picture 
   ![Image of profile avatar](${profilePicture})
-  * User GitHub email 
-  ${projectURL}
-
+  
+   ${projectURL}
 
 `;
 }
-
-
-
 
 module.exports = generateMarkdown;
