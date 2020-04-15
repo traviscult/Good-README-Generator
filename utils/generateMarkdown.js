@@ -3,6 +3,7 @@ function generateMarkdown(data) {
 # ${data.title}
 
 ## Description
+${data.description}
 
 ## Table of contents 
 * [Installation](#installation)
@@ -14,19 +15,28 @@ function generateMarkdown(data) {
 
 
 ## Installation
+${data.installation}
 
 ## Usage 
+${data.usage}
 
 ## Credits
+${data.credits}
 
 ## License 
+${data.license}
 
 ## Badge 
 
 ## Contributing
-
+${data.contrubuting}
 
 ## Test
+${data.tests}
+
+## Questions
+  * User GitHub profile picture
+  * User GitHub email
 
 
 `;

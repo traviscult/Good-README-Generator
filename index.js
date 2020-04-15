@@ -46,21 +46,28 @@ const questions = () => {
             name: "contrubuting",
             message: "What are your guidelines for contribiting to this project?",
         },
-        // {
-        //     type: "input",
-        //     name: "tests",
-        //     message: "",
-        // },
+        {
+            type: "input",
+            name: "tests",
+            message: "Have you tested your project?",
+        },
     ]);
 };
 
 
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, "utf8",(err) => {
+        if (err) throw err;
+    });
+};
 
-function init() {
-    questions();
-    // generateMarkdown();
-    // writeToFile();
+async function init() {
+    
+
+    const answers = await questions();
+    console.log(answers)
+    generateMarkdown(answers);
+    writeToFile("readme.md", generateMarkdown(answers));
 }
 
 init();
