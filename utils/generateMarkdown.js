@@ -3,8 +3,12 @@ function generateMarkdown(data) {
   const kebabCaseTitle = data.title.toLowerCase().split(" ").join("-");
   const projectURL = ` https://github.com/${data.gitHub}/${kebabCaseTitle}`
 
+	const badge = `https://img.shields.io/github/issues/${data.gitHub}/${kebabCaseTitle}`
+
   return `
 # ${data.title}
+
+[![GitHub license](${badge})](${projectURL})
 
 ## Description
 ${data.description}
@@ -29,8 +33,6 @@ ${data.credits}
 
 ## License 
 ${data.license}
-
-## Badge 
 
 ## Contributing
 ${data.contrubuting}
