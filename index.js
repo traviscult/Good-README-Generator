@@ -55,7 +55,7 @@ const questions = () => {
 };
 
 
-function writeToFile(fileName, data) {
+function writeToFile (fileName, data) {
     fs.writeFile(fileName, data, "utf8",(err) => {
         if (err) throw err;
     });
@@ -63,7 +63,6 @@ function writeToFile(fileName, data) {
 
 async function init() {
     
-
     const answers = await questions();
     console.log(answers)
     generateMarkdown(answers);
